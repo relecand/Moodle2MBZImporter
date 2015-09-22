@@ -162,8 +162,8 @@ while ($file = readdir ($handle)) {
       $course_data->category = $cat;
     }
 
-    #$HTWImportCourse= new HTWImportCourse($course_data,$admin_user_id);
-    #$HTWImportCourse->doRestore();
+    $HTWImportCourse= new HTWImportCourse($course_data,$admin_user_id);
+    $HTWImportCourse->doRestore();
   }
   catch (Exception $e)
   {
