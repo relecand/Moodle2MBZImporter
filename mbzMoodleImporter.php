@@ -3,17 +3,17 @@
 define('CLI_SCRIPT', TRUE);
 
 //MBZ folder with mbz files
-$path_to_mbz="/mnt/mbz_import/MBZImporter/mbz-course-exports";
+$path_to_mbz="/moodle/restore/test";
 //temp/backup/import -> has to be there
-$extract_path="/var/moodledata/temp/backup/import";
+$extract_path="/moodle/moodledata/temp/backup/import";
 //Course category, where the courses are restored
-$categoryid=5;
+$categoryid=15;
 //Admin-User ID
-$admin_user_id=24;
+$admin_user_id=2;
 //Local Log file
-$log="/mnt/mbz_import/MBZImporter/mbz_import_error.log";
+$log="/moodle/Moodle2MBZImporter/mbz_import_error.log";
 
-require_once("/var/www/moodle/config.php");
+require_once("/moodle/moodle/config.php");
 require_once($CFG->dirroot . '/backup/util/includes/restore_includes.php');
 
 class Logging
@@ -146,8 +146,24 @@ while ($file = readdir ($handle)) {
     $course_data->fullname = $fullname;
     $course_data->shortname = $shortname;
 
-    $HTWImportCourse= new HTWImportCourse($course_data,$admin_user_id);
-    $HTWImportCourse->doRestore();
+    
+    $coursexmlfile=$extract_path."/course/course.xml";
+    $myfile = fopen($coursexmlfile, "r") or die("Unable to open file!");
+    $coursexml = fread($myfile,filesize($coursexmlfile));
+    fclose($myfile);
+
+    $pattern = "/<description>([\w\W]*?)<\/description>/";
+    preg_match($pattern, $coursexml, $matches);
+    $cat = $matches[1];
+    $cat = preg_replace("/[^0-9]/","",$cat);
+    
+    if (is_numeric($cat)) {
+      echo "<category>".$cat."</category>\n";
+      $course_data->category = $cat;
+    }
+
+    #$HTWImportCourse= new HTWImportCourse($course_data,$admin_user_id);
+    #$HTWImportCourse->doRestore();
   }
   catch (Exception $e)
   {
