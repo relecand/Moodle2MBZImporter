@@ -7,9 +7,11 @@ $path_to_mbz="/moodle/restore/test";
 //temp/backup/import -> has to be there
 $extract_path="/moodle/moodledata/temp/backup/import";
 //Course category, where the courses are restored
-$categoryid=15;
+$categoryid=13;
 //Admin-User ID
 $admin_user_id=2;
+//mbz format: zip or tar.gz
+$mbzformat="tar.gz";
 //Local Log file
 $log="/moodle/Moodle2MBZImporter/mbz_import_error.log";
 
@@ -94,6 +96,7 @@ class HTWImportCourse
     }
 
 }
+
 echo "\n\nBeginning massive import\n\n";
 
 $handle=opendir($path_to_mbz);
@@ -116,14 +119,41 @@ while ($file = readdir ($handle)) {
   //Extract mbz to path
    try
    {
+
+    $mbzfile=$path_to_mbz."/".$file;
+
     //extract file
-    $zip = new ZipArchive;
-    $htwFileExtract=new HTWFileExtract($zip);
-    $htwFileExtract->delExtractPath($extract_path);
-    $htwFileExtract->setExtractPath($extract_path);
-    $htwFileExtract->setFilePath($path_to_mbz."/".$file);
-    $htwFileExtract->ExtractToPath();
-    $zip->close();
+    if ($mbzformat=="zip") {	
+	    $zip = new ZipArchive;
+	    $htwFileExtract=new HTWFileExtract($zip);
+	    $htwFileExtract->delExtractPath($extract_path);
+	    $htwFileExtract->setExtractPath($extract_path);
+	    $htwFileExtract->setFilePath($mbzfile);
+	    $htwFileExtract->ExtractToPath();
+	    $zip->close();
+
+    } elseif ($mbzformat=="tar.gz") {
+	    
+	    //Inhalt des Importverzeichnisses loeschen
+            shell_exec('rm -rf '.$extract_path.'/*');
+            shell_exec('rm '.$extract_path.'/.ARCHIVE_INDEX');
+
+	    //create tar file path
+            list($filename,$suffix) = split('\.', $mbzfile);
+            $filename=$filename.'.tar';
+
+	    if (file_exists($filename)) {
+		shell_exec('rm '.$filename);
+	    }
+
+	    // decompress from gz
+	    $p = new PharData($mbzfile);
+	    $p->decompress(); // creates .tar
+
+            // unarchive from the tar
+	    $phar = new PharData($filename);
+	    $phar->extractTo($extract_path);
+    }  
    }
    catch (Exception $e)
    {
@@ -159,7 +189,7 @@ while ($file = readdir ($handle)) {
     
     if (is_numeric($cat)) {
       echo "<category>".$cat."</category>\n";
-      $course_data->category = $cat;
+      //$course_data->category = $cat;
     }
 
     $HTWImportCourse= new HTWImportCourse($course_data,$admin_user_id);
