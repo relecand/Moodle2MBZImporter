@@ -7,7 +7,7 @@ $path_to_mbz="/moodle/restore/test";
 //temp/backup/import -> has to be there
 $extract_path="/moodle/moodledata/temp/backup/import";
 //Course category, where the courses are restored
-$categoryid=13;
+$categoryid=16;
 //Admin-User ID
 $admin_user_id=2;
 //mbz format: zip or tar.gz
@@ -136,23 +136,31 @@ while ($file = readdir ($handle)) {
 	    
 	    //Inhalt des Importverzeichnisses loeschen
             shell_exec('rm -rf '.$extract_path.'/*');
-            shell_exec('rm '.$extract_path.'/.ARCHIVE_INDEX');
+	    if (file_exists($extract_path.'/.ARCHIVE_INDEX')) {
+                 shell_exec('rm '.$extract_path.'/.ARCHIVE_INDEX');
+            }
+
+	    shell_exec('mkdir '.$extract_path);
 
 	    //create tar file path
-            list($filename,$suffix) = split('\.', $mbzfile);
-            $filename=$filename.'.tar';
+            //list($filename,$suffix) = split('\.', $mbzfile);
+            //$filename=$filename.'.tar';
 
-	    if (file_exists($filename)) {
-		shell_exec('rm '.$filename);
-	    }
+	    //if (file_exists($filename)) {
+		//shell_exec('rm '.$filename);
+	    //}
+
+	    $extractCmd = 'tar zxf '.$mbzfile.' -C '.$extract_path;
+            echo $extractCmd;
+            shell_exec($extractCmd);
 
 	    // decompress from gz
-	    $p = new PharData($mbzfile);
-	    $p->decompress(); // creates .tar
+	    //$p = new PharData($mbzfile);
+	    //$p->decompress(); // creates .tar
 
             // unarchive from the tar
-	    $phar = new PharData($filename);
-	    $phar->extractTo($extract_path);
+	    //$phar = new PharData($filename);
+	    //$phar->extractTo($extract_path);
     }  
    }
    catch (Exception $e)

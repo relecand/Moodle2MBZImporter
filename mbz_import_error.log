@@ -39,3 +39,53 @@
 2015-09-25 16:55:01:1 sicherung-moodle2-course-97-20150924-2355.mbz---->Error: Extract --->Extraction from phar "/moodle/restore/test/sicherung-moodle2-course-97-20150924-2355.tar" failed: Cannot extract ".ARCHIVE_INDEX" to "/moodle/moodledata/temp/backup/import/.ARCHIVE_INDEX", path already exists
 2015-09-25 16:55:02:2 sicherung-moodle2-course-77-20150924-2303.mbz---->Error: Extract --->Extraction from phar "/moodle/restore/test/sicherung-moodle2-course-77-20150924-2303.tar" failed: Cannot extract ".ARCHIVE_INDEX" to "/moodle/moodledata/temp/backup/import/.ARCHIVE_INDEX", path already exists
 2015-09-25 16:55:02:3 sicherung-moodle2-course-99-20150924-2356.mbz---->Error: Extract --->Extraction from phar "/moodle/restore/test/sicherung-moodle2-course-99-20150924-2356.tar" failed: Cannot extract ".ARCHIVE_INDEX" to "/moodle/moodledata/temp/backup/import/.ARCHIVE_INDEX", path already exists
+2015-09-25 19:14:23:6 sicherung-moodle2-course-40-20150924-2148.mbz---->Error: Course import --->error/restore_not_executable_awaiting_required
+2015-09-25 19:16:21:10 sicherung-moodle2-course-124-20150925-0024.mbz---->Error: Extract --->phar error: "/moodle/restore/sicherung-moodle2-course-124-20150925-0024.mbz" is a corrupted tar file (truncated)
+2015-09-25 19:18:03:14 sicherung-moodle2-course-48-20150924-2225.mbz---->Error: Extract --->phar error: "/moodle/restore/sicherung-moodle2-course-48-20150924-2225.mbz" is a corrupted tar file (truncated)
+2015-09-25 19:20:02:18 sicherung-moodle2-course-128-20150925-0032.mbz---->Error: Extract --->phar error: "/moodle/restore/sicherung-moodle2-course-128-20150925-0032.mbz" is a corrupted tar file (truncated)
+2015-09-25 19:20:02:19 sicherung-moodle2-course-275-20150925-0301.mbz---->Error: Course import --->error/restore_not_executable_awaiting_required
+2015-09-25 19:21:06:22 sicherung-moodle2-course-104-20150925-0000.mbz---->Error: Extract --->Cannot convert phar archive "/moodle/restore/sicherung-moodle2-course-104-20150925-0000.mbz", unable to copy entry "files/c3/c3a8029b23bd9e086220cf1261d49079f7ccb18a" contents
+2015-09-25 19:21:06:23 sicherung-moodle2-course-272-20150925-0301.mbz---->Error: Course import --->error/restore_not_executable_awaiting_required
+2015-09-25 19:21:06:24 sicherung-moodle2-course-271-20150925-0301.mbz---->Error: Course import --->error/restore_not_executable_awaiting_required
+2015-09-25 19:21:23:26 sicherung-moodle2-course-23-20150924-2132.mbz---->Error: Extract --->tar-based phar "/moodle/restore/sicherung-moodle2-course-23-20150924-2132.tar" cannot be created, contents of file "files/4f/4f33107396c9c9cae72087c79451de6b80dce5f3" could not be written
+2015-09-25 19:22:29:33 sicherung-moodle2-course-102-20150924-2358.mbz---->Error: Extract --->phar error: "/moodle/restore/sicherung-moodle2-course-102-20150924-2358.mbz" is a corrupted tar file (truncated)
+2015-09-25 20:50:46:34 sicherung-moodle2-course-34-20150924-2144.mbz---->Error: Extract --->phar error: "/moodle/restore/sicherung-moodle2-course-34-20150924-2144.mbz" is a corrupted tar file (truncated)
+2015-09-25 20:51:15:36 sicherung-moodle2-course-167-20150925-0117.mbz---->Error: Extract --->Cannot convert phar archive "/moodle/restore/sicherung-moodle2-course-167-20150925-0117.mbz", unable to copy entry "files/35/3503e690156e77c0ba356963a05e465910570491" contents
+2015-09-25 20:51:26:39 sicherung-moodle2-course-187-20150925-0219.mbz---->Error: Extract --->Cannot convert phar archive "/moodle/restore/sicherung-moodle2-course-187-20150925-0219.mbz", unable to copy entry "files/7b/7bf70655e5a499e9d6363239d59654975daf4545" contents
+2015-09-25 20:51:30:40 sicherung-moodle2-course-286-20150925-0303.mbz---->Error: Extract --->phar error: "/moodle/restore/sicherung-moodle2-course-286-20150925-0303.mbz" is a corrupted tar file (truncated)
+2015-09-25 20:51:41:41 sicherung-moodle2-course-122-20150925-0017.mbz---->Error: Extract --->phar error: "/moodle/restore/sicherung-moodle2-course-122-20150925-0017.mbz" is a corrupted tar file (truncated)
+2015-09-25 20:51:50:43 sicherung-moodle2-course-123-20150925-0018.mbz---->Error: Extract --->phar error: "/moodle/restore/sicherung-moodle2-course-123-20150925-0018.mbz" is a corrupted tar file (truncated)
+2015-09-25 20:51:53:44 sicherung-moodle2-course-203-20150925-0228.mbz---->Error: Extract --->Cannot convert phar archive "/moodle/restore/sicherung-moodle2-course-203-20150925-0228.mbz", unable to copy entry "files/80/801e0b4782a0321d9f2ceafabc54a104ea2dcc7e" contents
+2015-09-25 20:51:53:45 sicherung-moodle2-course-304-20150925-0306.mbz---->Error: Extract --->phar error: "/moodle/restore/sicherung-moodle2-course-304-20150925-0306.mbz" is a corrupted tar file (truncated)
+2015-09-25 20:51:55:46 sicherung-moodle2-course-171-20150925-0120.mbz---->Error: Extract --->phar error: "/moodle/restore/sicherung-moodle2-course-171-20150925-0120.mbz" is a corrupted tar file (truncated)
+2015-09-25 20:51:56:47 sicherung-moodle2-course-307-20150925-0306.mbz---->Error: Extract --->Cannot convert phar archive "/moodle/restore/sicherung-moodle2-course-307-20150925-0306.mbz", unable to copy entry "files/96/96c17da7d23b3f4f9a6987dadbd904d7ac489f63" contents
+2015-09-25 20:51:57:48 sicherung-moodle2-course-191-20150925-0222.mbz---->Error: Extract --->phar error: "/moodle/restore/sicherung-moodle2-course-191-20150925-0222.mbz" is a corrupted tar file (truncated)
+2015-09-25 22:03:54:6 sicherung-moodle2-course-40-20150924-2148.mbz---->Error: Course import --->error/restore_not_executable_awaiting_required
+2015-09-25 22:04:47:10 sicherung-moodle2-course-124-20150925-0024.mbz---->Error: Course import --->error/restore_not_executable_awaiting_required
+2015-09-25 22:10:35:19 sicherung-moodle2-course-275-20150925-0301.mbz---->Error: Course import --->error/restore_not_executable_awaiting_required
+2015-09-25 22:11:46:23 sicherung-moodle2-course-272-20150925-0301.mbz---->Error: Course import --->error/restore_not_executable_awaiting_required
+2015-09-25 22:11:47:24 sicherung-moodle2-course-271-20150925-0301.mbz---->Error: Course import --->error/restore_not_executable_awaiting_required
+2015-09-25 22:26:12:54 sicherung-moodle2-course-266-20150925-0300.mbz---->Error: Course import --->error/restore_not_executable_awaiting_required
+2015-09-25 22:26:20:56 sicherung-moodle2-course-80-20150924-2303.mbz---->Error: Course import --->error/restore_not_executable_awaiting_required
+2015-09-25 22:26:33:58 sicherung-moodle2-course-121-20150925-0017.mbz---->Error: Course import --->error/restore_not_executable_awaiting_required
+2015-09-25 22:27:12:62 sicherung-moodle2-course-213-20150925-0232.mbz---->Error: Course import --->error/restore_not_executable_awaiting_required
+2015-09-25 22:27:17:64 sicherung-moodle2-course-120-20150925-0016.mbz---->Error: Course import --->error/restore_not_executable_awaiting_required
+2015-09-25 22:49:59:94 sicherung-moodle2-course-79-20150924-2303.mbz---->Error: Course import --->error/restore_not_executable_awaiting_required
+2015-09-25 22:53:36:105 sicherung-moodle2-course-56-20150924-2230.mbz---->Error: Course import --->error/mod_assign_upgrade_failed
+2015-09-25 22:56:42:113 sicherung-moodle2-course-132-20150925-0034.mbz---->Error: Course import --->error/mod_assign_upgrade_failed
+2015-09-25 22:57:12:118 sicherung-moodle2-course-7-20150924-2126.mbz---->Error: Course import --->error/restore_not_executable_awaiting_required
+2015-09-25 23:16:52:151 sicherung-moodle2-course-10-20150924-2127.mbz---->Error: Course import --->error/restore_not_executable_awaiting_required
+2015-09-25 23:29:08:161 sicherung-moodle2-course-200-20150925-0227.mbz---->Error: Course import --->error/restore_not_executable_awaiting_required
+2015-09-25 23:44:01:176 sicherung-moodle2-course-83-20150924-2322.mbz---->Error: Course import --->error/restore_not_executable_awaiting_required
+2015-09-25 23:45:52:179 sicherung-moodle2-course-267-20150925-0300.mbz---->Error: Course import --->error/restore_not_executable_awaiting_required
+2015-09-25 23:46:06:181 sicherung-moodle2-course-268-20150925-0300.mbz---->Error: Course import --->error/restore_not_executable_awaiting_required
+2015-09-25 23:49:01:191 sicherung-moodle2-course-269-20150925-0301.mbz---->Error: Course import --->error/restore_not_executable_awaiting_required
+2015-09-25 23:49:06:192 sicherung-moodle2-course-274-20150925-0301.mbz---->Error: Course import --->error/restore_not_executable_awaiting_required
+2015-09-25 23:49:41:194 sicherung-moodle2-course-47-20150924-2219.mbz---->Error: Course import --->error/restore_not_executable_awaiting_required
+2015-09-25 23:50:51:198 sicherung-moodle2-course-273-20150925-0301.mbz---->Error: Course import --->error/restore_not_executable_awaiting_required
+2015-09-26 00:17:04:242 sicherung-moodle2-course-270-20150925-0301.mbz---->Error: Course import --->error/restore_not_executable_awaiting_required
+2015-09-26 00:22:07:253 sicherung-moodle2-course-43-20150924-2149.mbz---->Error: Course import --->error/restore_not_executable_awaiting_required
+2015-09-26 00:25:22:261 sicherung-moodle2-course-11-20150924-2128.mbz---->Error: Course import --->error/restore_not_executable_awaiting_required
+2015-09-26 00:41:55:266 sicherung-moodle2-course-214-20150925-0233.mbz---->Error: Course import --->error/restore_not_executable_awaiting_required
+2015-09-26 08:35:04:12 sicherung-moodle2-course-56-20150924-2230.mbz---->Error: Course import --->error/mod_assign_upgrade_failed
+2015-09-26 08:35:23:13 sicherung-moodle2-course-132-20150925-0034.mbz---->Error: Course import --->error/mod_assign_upgrade_failed
