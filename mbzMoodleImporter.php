@@ -179,7 +179,7 @@ while ($file = readdir ($handle)) {
   //Import course
   try
   {
-    $course_data=new Object();
+    $course_data=new stdClass();
     $course_data->category = $categoryid;
     $course_data->fullname = $fullname;
     $course_data->shortname = $shortname;
